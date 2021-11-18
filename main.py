@@ -14,6 +14,10 @@ import colorama
 
 path = 'tmp.png'
 pytesseract.pytesseract.tesseract_cmd = r'C:\\Program Files (x86)\\Tesseract-OCR\\tesseract'
+flag_show_gui = False
+flag_screenshot = False
+flag_timer = False
+flag_show_text = False
 
 def main():
   colorama.init()
@@ -52,6 +56,7 @@ def handleInput():
         # option screen shot
         # option screen shot a repetition
         # option no graphics
+        # option créer
         if(option_i == "-i"):
           name = argument_i
           if(exists(name)):
