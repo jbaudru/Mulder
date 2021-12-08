@@ -1,9 +1,7 @@
 import sys
-from os.path import exists
 import time
 
 import pytesseract
-from pdf2image import convert_from_path
 import cv2
 from textblob import TextBlob
 from textblob.sentiments import NaiveBayesAnalyzer
@@ -117,7 +115,7 @@ def handleInput():
           flag_timer = True
           try:
             repeat = int(argument_i)
-          except:
+          except ValueError:
             cprint(" Error - Wrong option value", 'red')
             showHelp()
             quit()
